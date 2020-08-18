@@ -1,0 +1,21 @@
+X Array
+The x array from 0 to 2 with 9 nodes is [ 0.    0.25  0.5   0.75  1.    1.25  1.5   1.75  2.  ]
+Number of elements
+The number of elements is 8 
+Number of unknowns
+The number of unknowns is 7 
+Local to Global Node array
+The local to global node array is [[ 0.  1.]
+ [ 1.  2.]
+ [ 2.  3.]
+ [ 3.  4.]
+ [ 4.  5.]
+ [ 5.  6.]
+ [ 6.  7.]
+ [ 7.  8.]]
+Unknown Node Array
+The unknown node array is [-1, 1, 2, 3, 4, 5, 6, 7, -1] 
+Area of the elements
+the area of the elements is [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25]
+X quadrature points
+The x quadrature points are [0.125, 0.375, 0.625, 0.875, 1.125, 1.375, 1.625, 1.875] 

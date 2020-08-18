@@ -1,0 +1,55 @@
+def linear_basis_calculator(x_array,x_point,node_index):
+    if node_index is 0:
+        if x_point>x_array[node_index+1]:
+            basis_function_result=0
+        elif x_point  == x_array[node_index]:
+            basis_function_result=1
+        else:#x_point>x_array[node_index] and x_point<x_array[node_index+1]
+            basis_function_result=(x_point-x_array[node_index+1])/(x_array[node_index]-x_array[node_index+1])
+    elif node_index in range(1,len(x_array)-1):
+        if x_point>x_array[node_index-1] and x_point<x_array[node_index]:
+            basis_function_result=(x_point-x_array[node_index-1])/(x_array[node_index]-x_array[node_index-1])
+        elif x_point == x_array[node_index]:
+            basis_function_result=1
+        elif x_point>x_array[node_index] and x_point<x_array[node_index+1]:
+            basis_function_result=(x_point-x_array[node_index+1])/(x_array[node_index]-x_array[node_index+1])
+        else:
+            basis_function_result=0
+    else:
+        if x_point>x_array[node_index-1] and x_point<x_array[node_index]:
+            basis_function_result=(x_point-x_array[node_index-1])/(x_array[node_index]-x_array[node_index-1])
+        elif x_point  == x_array[node_index]:
+            basis_function_result=1
+        else:
+            basis_function_result=0
+    
+
+    return basis_function_result
+
+def derivative_basis_calculator(x_array,x_point,node_index):
+    if node_index is 0:
+        if x_point>x_array[node_index+1]:
+            basis_derivative_result=0
+        elif x_point  == x_array[node_index]:
+            basis_derivative_result=0
+        else:#x_point>x_array[node_index] and x_point<x_array[node_index+1]
+            basis_derivative_result=1/(x_array[node_index]-x_array[node_index+1])
+    elif node_index in range(1,len(x_array)-1):
+        if x_point>x_array[node_index-1] and x_point<x_array[node_index]:
+            basis_derivative_result=1/(x_array[node_index]-x_array[node_index-1])
+        elif x_point == x_array[node_index]:
+            basis_derivative_result=0
+        elif x_point>x_array[node_index] and x_point<x_array[node_index+1]:
+            basis_derivative_result=1/(x_array[node_index]-x_array[node_index+1])
+        else:
+            basis_derivative_result=0
+    else:
+        if x_point>x_array[node_index-1] and x_point<x_array[node_index]:
+            basis_derivative_result=1/(x_array[node_index]-x_array[node_index-1])
+        elif x_point  == x_array[node_index]:
+            basis_derivative_result=0
+        else:
+            basis_derivative_result=0
+
+    return basis_derivative_result
+
